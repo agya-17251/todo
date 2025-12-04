@@ -3,4 +3,17 @@ from . import views
 
 urlpatterns = [
     path('addTask/',views.addTask , name = 'addTask'),
+    # mark as done
+    path('mark_as_done/<int:pk>/', views.mark_as_done, name= 'mark_as_done'),
+    # mark_as)undone
+    path('mark_as_Undone/<int:pk>/',views.mark_as_Undone, name= 'mark_as_Undone'),
+
+    # edit feture
+
+    path('edit_task/<int:pk>/',views.edit_task, name= 'edit_task'),
+
+    #delete feature
+
+    path('delete_task/<int:pk>/',views.delete_task, name= 'delete_task'),
+
 ]
